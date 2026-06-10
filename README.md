@@ -119,3 +119,28 @@ Date:   Wed Jun 10 13:41:01 2026 +0200
 
     chore: Create initial file
 
+### Editing Commit History
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git rebase -i HEAD~2
+Successfully rebased and updated refs/heads/main.
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git reset --hard ORIG_HEAD
+HEAD is now at 8d912aa include test4.md
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git rebase -i HEAD~2
+[detached HEAD e4391e0] Create second file
+ Date: Wed Jun 10 13:41:02 2026 +0200
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git log --oneline
+2ee8e15 (HEAD -> main) include test4.md
+e4391e0 Create second file
+2079488 chore: Create initial file
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
