@@ -1,6 +1,6 @@
 # Git Advanced excersice solutions
 ## Part1
-### Missing File Fix
+### 1: Missing File Fix
 
 User@Illumin▒epc MINGW64 /d
 $ git clone https://github.com/illumineMUTUYIMANA/Gym-GitAdvanced-Exercise-Solutions.git
@@ -119,7 +119,7 @@ Date:   Wed Jun 10 13:41:01 2026 +0200
 
     chore: Create initial file
 
-### Editing Commit History
+### 2: Editing Commit History
 
 User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
 $ git rebase -i HEAD~2
@@ -144,3 +144,38 @@ e4391e0 Create second file
 2079488 chore: Create initial file
 
 User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+
+### 3: Keeping History Tidy - Squashing Commits
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git rebase -i HEAD~2
+error: could not read file '.git/rebase-merge/git-rebase-todo': No such file or directory
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git rebase -i HEAD~3
+fatal: invalid upstream 'HEAD~3'
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git log --oneline
+2ee8e15 (HEAD -> main) include test4.md
+e4391e0 Create second file
+2079488 chore: Create initial file
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git rebase -i --root
+[detached HEAD 6777447] chore: Create initial file
+ Date: Wed Jun 10 13:41:01 2026 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.md
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git log --oneline
+efa7e59 (HEAD -> main) include test4.md
+6777447 chore: Create initial file
+
+User@Illumin▒epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$
+
+### 4: 
