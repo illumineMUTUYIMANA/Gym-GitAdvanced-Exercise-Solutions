@@ -484,3 +484,13 @@ efa7e59 HEAD@{21}: rebase (pick): include test4.md
 
 ```
 
+## part2
+
+### Feature Branch Creation
+
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+
+```
