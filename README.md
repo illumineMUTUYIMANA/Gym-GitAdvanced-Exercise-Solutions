@@ -453,5 +453,34 @@ $ git log --graph
 :
 ```
 
-### 10:
+### 10: Understanding Reflogs (Bonus)
+
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git reflog
+29d7f6e (HEAD -> main) HEAD@{0}: cherry-pick: Implemented test 5
+4dbe173 HEAD@{1}: checkout: moving from ft/branch to main
+7bd1c51 (ft/branch) HEAD@{2}: commit: Implemented test 5
+4dbe173 HEAD@{3}: checkout: moving from main to ft/branch
+4dbe173 HEAD@{4}: rebase (finish): returning to refs/heads/main
+4dbe173 HEAD@{5}: rebase (pick): Temporary Commit A
+e5a7797 HEAD@{6}: rebase (pick): Temporary Commit B
+a8c8aab HEAD@{7}: rebase (start): checkout HEAD~3
+77716f1 HEAD@{8}: commit: Temporary Commit B
+913437a HEAD@{9}: commit: Temporary Commit A
+a8c8aab HEAD@{10}: rebase (finish): returning to refs/heads/main
+a8c8aab HEAD@{11}: rebase (start): checkout HEAD~1
+285253a HEAD@{12}: commit: Unwanted commit
+a8c8aab HEAD@{13}: commit: Create third and fourth files
+6777447 HEAD@{14}: reset: moving to HEAD~2
+010bf51 HEAD@{15}: rebase (abort): returning to refs/heads/main
+59fc240 HEAD@{16}: rebase (start): checkout HEAD~2
+010bf51 HEAD@{17}: commit: Create fourth file
+59fc240 HEAD@{18}: commit: Create Third File
+6777447 HEAD@{19}: reset: moving to HEAD~1
+efa7e59 HEAD@{20}: rebase (finish): returning to refs/heads/main
+efa7e59 HEAD@{21}: rebase (pick): include test4.md
+:
+
+```
 
