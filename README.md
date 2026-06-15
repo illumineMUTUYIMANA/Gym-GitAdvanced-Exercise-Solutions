@@ -208,6 +208,74 @@ $
 
 ### 8: Cherry-Picking Commits
 
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git checkout -b ft/branch
+Switched to a new branch 'ft/branch'
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/branch)
+$ echo "this is the content of test5.md on branch ft/branch" >touch test5.md
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/branch)
+$ echo "this is the content of test5.md on branch ft/branch" > test5.md
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/branch)
+$ rm touch
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/branch)
+$ ls
+test1.md  test2.md  test3.md  test4.md  test5.md
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/branch)
+$ git add .
+warning: in the working copy of 'test5.md', LF will be replaced by CRLF the next time Git touches it
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/branch)
+$ git status
+On branch ft/branch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   test5.md
 
 
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/branch)
+$ git commit -m "Implemented test 5"
+[ft/branch 7bd1c51] Implemented test 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/branch)
+$ git log --oneline
+7bd1c51 (HEAD -> ft/branch) Implemented test 5
+4dbe173 (main) Temporary Commit A
+e5a7797 Temporary Commit B
+a8c8aab Create third and fourth files
+6777447 chore: Create initial file
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/branch)
+$ git checkout main
+Switched to branch 'main'
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git cherry-pick 7bd1c51
+[main 29d7f6e] Implemented test 5
+ Date: Mon Jun 15 13:45:29 2026 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ ls
+test1.md  test2.md  test3.md  test4.md  test5.md
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git log --oneline
+29d7f6e (HEAD -> main) Implemented test 5
+4dbe173 Temporary Commit A
+e5a7797 Temporary Commit B
+a8c8aab Create third and fourth files
+6777447 chore: Create initial file
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ 
+```
 
