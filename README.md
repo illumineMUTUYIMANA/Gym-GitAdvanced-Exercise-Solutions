@@ -279,3 +279,179 @@ User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
 $ 
 ```
 
+### 9: Visualizing Commit History (Bonus)
+
+```bash
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git log --graph
+* commit 29d7f6ea62428f12a7006f7de27dd0bf9705884a (HEAD -> main)
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:45:29 2026 +0200
+| 
+|     Implemented test 5
+| 
+* commit 4dbe173951b081db976623ec37572524a9ef0384
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:26 2026 +0200
+:...skipping...
+* commit 29d7f6ea62428f12a7006f7de27dd0bf9705884a (HEAD -> main)
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:45:29 2026 +0200
+| 
+|     Implemented test 5
+| 
+* commit 4dbe173951b081db976623ec37572524a9ef0384
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:26 2026 +0200
+| 
+|     Temporary Commit A
+| 
+* commit e5a7797bd02a11d2b7526733d87823b26e842176
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:27 2026 +0200
+:...skipping...
+* commit 29d7f6ea62428f12a7006f7de27dd0bf9705884a (HEAD -> main)
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:45:29 2026 +0200
+| 
+|     Implemented test 5
+| 
+* commit 4dbe173951b081db976623ec37572524a9ef0384
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:26 2026 +0200
+| 
+|     Temporary Commit A
+| 
+* commit e5a7797bd02a11d2b7526733d87823b26e842176
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:27 2026 +0200
+| 
+:...skipping...
+* commit 29d7f6ea62428f12a7006f7de27dd0bf9705884a (HEAD -> main)
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:45:29 2026 +0200
+| 
+|     Implemented test 5
+| 
+* commit 4dbe173951b081db976623ec37572524a9ef0384
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:26 2026 +0200
+| 
+|     Temporary Commit A
+| 
+* commit e5a7797bd02a11d2b7526733d87823b26e842176
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:27 2026 +0200
+| 
+|     Temporary Commit B
+:...skipping...
+* commit 29d7f6ea62428f12a7006f7de27dd0bf9705884a (HEAD -> main)
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:45:29 2026 +0200
+| 
+|     Implemented test 5
+| 
+* commit 4dbe173951b081db976623ec37572524a9ef0384
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:26 2026 +0200
+| 
+|     Temporary Commit A
+| 
+* commit e5a7797bd02a11d2b7526733d87823b26e842176
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:27 2026 +0200
+| 
+|     Temporary Commit B
+| 
+:...skipping...
+* commit 29d7f6ea62428f12a7006f7de27dd0bf9705884a (HEAD -> main)
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:45:29 2026 +0200
+| 
+|     Implemented test 5
+| 
+* commit 4dbe173951b081db976623ec37572524a9ef0384
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:26 2026 +0200
+| 
+|     Temporary Commit A
+| 
+* commit e5a7797bd02a11d2b7526733d87823b26e842176
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:27 2026 +0200
+| 
+|     Temporary Commit B
+| 
+* commit a8c8aaba694c84c196878082bac16f7d7b2427d5
+:...skipping...
+* commit 29d7f6ea62428f12a7006f7de27dd0bf9705884a (HEAD -> main)
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:45:29 2026 +0200
+| 
+|     Implemented test 5
+| 
+* commit 4dbe173951b081db976623ec37572524a9ef0384
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:26 2026 +0200
+| 
+|     Temporary Commit A
+| 
+* commit e5a7797bd02a11d2b7526733d87823b26e842176
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:27 2026 +0200
+| 
+|     Temporary Commit B
+| 
+* commit a8c8aaba694c84c196878082bac16f7d7b2427d5
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+:...skipping...
+* commit 29d7f6ea62428f12a7006f7de27dd0bf9705884a (HEAD -> main)
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:45:29 2026 +0200
+| 
+|     Implemented test 5
+| 
+* commit 4dbe173951b081db976623ec37572524a9ef0384
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:26 2026 +0200
+| 
+|     Temporary Commit A
+| 
+* commit e5a7797bd02a11d2b7526733d87823b26e842176
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:27 2026 +0200
+| 
+|     Temporary Commit B
+| 
+* commit a8c8aaba694c84c196878082bac16f7d7b2427d5
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Sat Jun 13 22:54:32 2026 +0200
+:...skipping...
+* commit 29d7f6ea62428f12a7006f7de27dd0bf9705884a (HEAD -> main)
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:45:29 2026 +0200
+| 
+|     Implemented test 5
+| 
+* commit 4dbe173951b081db976623ec37572524a9ef0384
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:26 2026 +0200
+| 
+|     Temporary Commit A
+| 
+* commit e5a7797bd02a11d2b7526733d87823b26e842176
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Mon Jun 15 13:14:27 2026 +0200
+| 
+|     Temporary Commit B
+| 
+* commit a8c8aaba694c84c196878082bac16f7d7b2427d5
+| Author: Illuminee mutuyimana <mutuyiillumine2@gmail.com>
+| Date:   Sat Jun 13 22:54:32 2026 +0200
+| 
+:
+```
+
+### 10:
+
