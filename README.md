@@ -486,7 +486,7 @@ efa7e59 HEAD@{21}: rebase (pick): include test4.md
 
 ## part2
 
-### Feature Branch Creation
+### 2: Feature Branch Creation
 
 ```bash
 User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
@@ -513,7 +513,7 @@ $ git commit -m "Implemented core functionality for new feature"
 
 ```
 
-### Switching Back and Making More Changes
+### 3: Switching Back and Making More Changes
 
 ```bash
 
@@ -534,4 +534,36 @@ $ git commit -m "Updated project readme"
  1 file changed, 1 insertion(+)
  create mode 100644 readme.txt
 
+```
+
+### 4: Local vs. Remote Branches
+
+```bash
+git push -u origin <branch-name>
+git pull branch-name
+git fetch --all
+
+```
+
+### 5: Branch Deletion
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git branch --merged
+* main
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git merge ft/new-feature
+Merge made by the 'ort' strategy.
+ feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git branch --merged
+  ft/new-feature
+* main
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git branch -d ft/new-feature
+Deleted branch ft/new-feature (was 9730194).
 ```
