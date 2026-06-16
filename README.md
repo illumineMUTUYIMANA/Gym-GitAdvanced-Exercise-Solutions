@@ -567,3 +567,31 @@ User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
 $ git branch -d ft/new-feature
 Deleted branch ft/new-feature (was 9730194).
 ```
+### Creating a Branch from a Commit
+
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git log --oneline
+91a8cda (HEAD -> main) Merge branch 'ft/new-feature'
+4211728 Updated project readme
+9730194 Implemented core functionality for new feature
+29d7f6e Implemented test 5
+4dbe173 Temporary Commit A
+e5a7797 Temporary Commit B
+a8c8aab Create third and fourth files
+6777447 chore: Create initial file
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git checkout -b ft/new-branch-from-commit 9730194
+Switched to a new branch 'ft/new-branch-from-commit'
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/new-branch-from-commit)
+$ git log --oneline
+9730194 (HEAD -> ft/new-branch-from-commit) Implemented core functionality for new feature
+29d7f6e Implemented test 5
+4dbe173 Temporary Commit A
+e5a7797 Temporary Commit B
+a8c8aab Create third and fourth files
+6777447 chore: Create initial file
+
+```
