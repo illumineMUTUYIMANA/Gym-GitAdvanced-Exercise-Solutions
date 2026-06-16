@@ -517,4 +517,21 @@ $ git commit -m "Implemented core functionality for new feature"
 
 ```bash
 
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/new-feature)
+$ git checkout main
+Switched to branch 'main'
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ echo "Hi, I am Illuminee I working on this project of Git advanced" > readme.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git add .
+warning: in the working copy of 'readme.txt', LF will be replaced by CRLF the next time Git touches it
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git commit -m "Updated project readme"
+[main 4211728] Updated project readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+
 ```
