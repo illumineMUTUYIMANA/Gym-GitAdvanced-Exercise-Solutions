@@ -494,3 +494,27 @@ $ git checkout -b ft/new-feature
 Switched to a new branch 'ft/new-feature'
 
 ```
+
+### 2: Working on the Feature Branch
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/new-feature)
+$ echo "feature branch ha this file of feature test for the purpose of learning" > feature.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/new-feature)
+$ git add .
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/new-feature)
+$ git commit -m "Implemented core functionality for new feature"
+[ft/new-feature 9730194] Implemented core functionality for new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+
+```
+
+### Switching Back and Making More Changes
+
+```bash
+
+```
