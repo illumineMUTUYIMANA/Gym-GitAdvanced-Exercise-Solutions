@@ -614,3 +614,17 @@ User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
 $ 
 ```
 
+### 8: Branch Rebasing
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/new-branch-from-commit)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.                                   
+
+```
+
+
+
