@@ -639,5 +639,47 @@ $ git branch
 
 ```
 
+### 10: Checking Out Detached HEAD
+
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git log --oneline
+91a8cda (HEAD -> main, ft/improved-branch-name) Merge branch 'ft/new-feature'
+4211728 Updated project readme
+9730194 Implemented core functionality for new feature
+29d7f6e Implemented test 5
+4dbe173 Temporary Commit A
+e5a7797 Temporary Commit B
+a8c8aab Create third and fourth files
+6777447 chore: Create initial file
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git checkout 29d7f6e
+Note: switching to '29d7f6e'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 29d7f6e Implemented test 5
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo ((29d7f6e...))
+$ git checkout main
+Previous HEAD position was 29d7f6e Implemented test 5
+Switched to branch 'main'
+
+```
+
 
 
