@@ -567,7 +567,7 @@ User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
 $ git branch -d ft/new-feature
 Deleted branch ft/new-feature (was 9730194).
 ```
-### Creating a Branch from a Commit
+### 6: Creating a Branch from a Commit
 
 ```bash
 User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
@@ -595,3 +595,22 @@ a8c8aab Create third and fourth files
 6777447 chore: Create initial file
 
 ```
+### 7: Branch Merging
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/new-branch-from-commit)
+$ git checkout main
+Switched to branch 'main'
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git merge ft/new-branch-from-commit
+Already up to date.
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git branch --merged
+  ft/new-branch-from-commit
+* main
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ 
+```
+
