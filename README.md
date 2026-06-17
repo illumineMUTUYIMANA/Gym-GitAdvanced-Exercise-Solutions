@@ -625,6 +625,19 @@ $ git rebase main
 Successfully rebased and updated refs/heads/ft/new-branch-from-commit.                                   
 
 ```
+### 9: Renaming Branches
+
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/new-branch-from-commit)
+$ git branch -m ft/new-branch-from-commit ft/improved-branch-name
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/improved-branch-name)
+$ git branch
+  ft/branch
+* ft/improved-branch-name
+  main
+
+```
 
 
 
