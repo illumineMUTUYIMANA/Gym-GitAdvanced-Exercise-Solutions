@@ -681,5 +681,243 @@ Switched to branch 'main'
 
 ```
 
+## part3:  Advanced Workflows (10+ Challenges)
+
+### 1: Stashing Changes
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git stash -m "practice stash"
+Saved working directory and index state On main: practice stash
+
+```
+
+### 2: Retrieving Stashed Changes
+
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git stash pop
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (da42080498faf1a954c4c5cc5df8185cec3eb860)
+
+```
+
+### 3: Branch Merging Conflicts (Continued)
+
+```bash
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        testingConflict.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git add testingConflict.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git commit -m "create and add initial line for conflict file"
+[main 5f9d3b0] create and add initial line for conflict file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 testingConflict.txt
+
+ User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git checkout -b ft/conflictTest
+Switched to a new branch 'ft/conflictTest'
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/conflictTest)
+$ echo "merge Conflict learning in git Adavanced" > testingConflict.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/conflictTest)
+$ git add testingConflict.txt
+warning: in the working copy of 'testingConflict.txt', LF will be replaced by CRLF the next time Git touches it
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/conflictTest)
+$ git commit -m "modified line in feature branch"
+[ft/conflictTest 8caaa0e] modified line in feature branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 testingConflict.txt
+
+ User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/conflictTest)
+$ git checkout main
+Switched to branch 'main'
+M       readme.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ echo "changing again the main initial line in main branch" > testingConflict.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git add testingConflict.txt
+warning: in the working copy of 'testingConflict.txt', LF will be replaced by CRLF the next time Git touches it
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git commit -m "modifying the initial line in main"
+[main 491efe9] modifying the initial line in main
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git merge ft/conflictTest
+Auto-merging testingConflict.txt
+CONFLICT (add/add): Merge conflict in testingConflict.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main|MERGING)
+$ git add testingConflict.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main|MERGING)
+$ git commit -m "conflict resolved with accept both changes"
+[main 5daf8d9] conflict resolved with accept both changes
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$
+```
+
+### 4: Resolving Merge Conflicts with a Merge Tool
+
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mergToolTest.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git add mergToolTest.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git commit -m "content to test mergetool"
+[main 0cec067] content to test mergetool
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mergToolTest.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git checkout ft/conflictTest
+Switched to branch 'ft/conflictTest'
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/conflictTest)
+$ echo "modifying the content of mergetoll in feature branch" > mergToolTest.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/conflictTest)
+$ git add mergToolTest.txt
+warning: in the working copy of 'mergToolTest.txt', LF will be replaced by CRLF the next time Git touches it
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/conflictTest)
+$ git commit -m "changes in feature branch modifying the main mergetool"
+[ft/conflictTest f880f93] changes in feature branch modifying the main mergetool
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mergToolTest.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (ft/conflictTest)
+$ git checkout main
+Switched to branch 'main'
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ echo "modifying again the content in the main branch" > mergToolTest.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git add mergToolTest.txt
+warning: in the working copy of 'mergToolTest.txt', LF will be replaced by CRLF the next time Git touches it
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git commit -m "in main modify the initial line of mergetool"
+[main d05115f] in main modify the initial line of mergetool
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git merge ft/conflictTest
+Auto-merging mergToolTest.txt
+CONFLICT (add/add): Merge conflict in mergToolTest.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main|MERGING)
+$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff nvimdiff
+Merging:
+mergToolTest.txt
+
+Normal merge conflict for 'mergToolTest.txt':
+  {local}: created file
+  {remote}: created file
+Hit return to start merge resolution tool (vimdiff): 
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main|MERGING)
+$ git config --global merge.tool vscode
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main|MERGING)
+$ git config --global mergetool.vscode.cmd 'code --wait "$MERGED"'
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main|MERGING)
+$ git config --global mergetool.keepBackup false
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main|MERGING)
+$ git mergetool
+Merging:
+mergToolTest.txt
+
+Normal merge conflict for 'mergToolTest.txt':
+  {local}: created file
+  {remote}: created file
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main|MERGING)
+$ git checkout --ours mergToolTest.txt
+Updated 0 paths from the index
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main|MERGING)
+$ git add mergToolTest.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main|MERGING)
+$ git commit -m "Resolved conflict by keeping ours (main)"
+[main 7eb95e0] Resolved conflict by keeping ours (main)
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git checkout ft/conflictTest -- mergToolTest.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git add mergToolTest.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git commit -m "Restore file content from feature branch"
+[main 5ebf121] Restore file content from feature branch
+ 1 file changed, 1 insertion(+)
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ 
+```
+
 
 
