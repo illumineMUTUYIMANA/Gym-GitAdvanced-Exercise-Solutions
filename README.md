@@ -919,5 +919,152 @@ User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
 $ 
 ```
 
+### 5: Understanding Detached HEAD State
 
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo ((a8c8aab...))
+$ git log --oneline
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git checkout a8c8aab
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo ((a8c8aab...))
+$ git checkout main
+```
+
+### 6: Ignoring Files/Directories
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ touch .gitignore
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ echo "/tmp" >> .gitignore
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ mkdir tmp
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ echo "the secret content to be in ignored" > tmp/secret.txt
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+```
+
+### 7: Working with Tags:
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git tag v1.0
+
+```
+
+### 8: Listing and Deleting Tags
+
+```bash
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git tag
+v1.0
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git tag -d v1.0
+Deleted tag 'v1.0' (was 5ebf121)
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git tag
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ 
+
+```
+
+### 9: Pushing Local Work to Remote Repositories
+
+```bash
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git add .
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git commit -m "Do git advanced Excercise"
+[main 23e5d94] Do git advanced Excercise
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git push -u origin main
+Enumerating objects: 46, done.
+Counting objects: 100% (46/46), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (41/41), done.
+Writing objects: 100% (46/46), 4.11 KiB | 382.00 KiB/s, done.
+Total 46 (delta 21), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (21/21), done.                                         
+To https://github.com/illumineMUTUYIMANA/Gym-GitAdvanced-repo.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git branch
+  ft/branch
+  ft/conflictTest
+  ft/improved-branch-name
+* main
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git push -u origin ft/conflictTest
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/conflictTest' on GitHub by visiting:            
+remote:      https://github.com/illumineMUTUYIMANA/Gym-GitAdvanced-repo/pull/new/ft/conflictTest                                                                            
+remote: 
+To https://github.com/illumineMUTUYIMANA/Gym-GitAdvanced-repo.git
+ * [new branch]      ft/conflictTest -> ft/conflictTest
+branch 'ft/conflictTest' set up to track 'origin/ft/conflictTest'.
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git push -u origin ft/improved-branch-name
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/improved-branch-name' on GitHub by visiting:    
+remote:      https://github.com/illumineMUTUYIMANA/Gym-GitAdvanced-repo/pull/new/ft/improved-branch-name                                                                    
+remote: 
+To https://github.com/illumineMUTUYIMANA/Gym-GitAdvanced-repo.git
+ * [new branch]      ft/improved-branch-name -> ft/improved-branch-name
+branch 'ft/improved-branch-name' set up to track 'origin/ft/improved-branch-name'.
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ 
+
+```
+
+### 10: Pulling Changes from Remote Repositories
+
+After editing readme on git hub and commit it.
+I went back in vs code and run the following
+
+```bash
+
+User@Illumin□epc MINGW64 /d/Gym-GitAdvanced-repo (main)
+$ git pull origin main
+remote: Enumerating objects: 5, done.                                                 
+remote: Counting objects: 100% (5/5), done.                                           
+remote: Compressing objects: 100% (3/3), done.                                        
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)                 
+Unpacking objects: 100% (3/3), 1.07 KiB | 109.00 KiB/s, done.
+From https://github.com/illumineMUTUYIMANA/Gym-GitAdvanced-repo
+ * branch            main       -> FETCH_HEAD
+   23e5d94..16b2bd9  main       -> origin/main
+Updating 23e5d94..16b2bd9
+Fast-forward
+ readme.txt | 6 ++++++
+ 1 file changed, 6 insertions(+)
+ 
+```
 
